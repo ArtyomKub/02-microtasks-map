@@ -1,24 +1,18 @@
-type NewComponentType = {
-    students: Array<StudentsType>
+import React from 'react';
+
+type NewComponentType= {
+   students: Array<StudentsType>
 }
 
 type StudentsType = {
-    id: number
-    name: string
     age: number
+    name: string
+    id: number
 }
 
-export const NewComponent = (props: NewComponentType) => {
+export const NewComponent = (props:NewComponentType) => {
+    debugger
     return (
-        <ul>
-            {props.students.map((objectFromStudentsArray, index) => {
-                return (
-                    <li key={objectFromStudentsArray.id}>
-                        <span>Name: {objectFromStudentsArray.name} </span>
-                        <span>Age: {objectFromStudentsArray.age}</span>
-                    </li>
-                )
-            })}
-        </ul>
+        <div> New component </div>
     )
 }
