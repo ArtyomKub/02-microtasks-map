@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import './App.css';
 import {NewComponent} from "./NewComponent";
 
-
 function App() {
     const [students, setStudents] = useState([
             {id: 1, name: "James", age: 8},

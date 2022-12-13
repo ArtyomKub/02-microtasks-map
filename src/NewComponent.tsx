@@ -1,7 +1,7 @@
 import React from 'react';
 
-type NewComponentType= {
-   students: Array<StudentsType>
+type NewComponentType = {
+    students: Array<StudentsType>
 }
 
 type StudentsType = {
@@ -10,9 +10,18 @@ type StudentsType = {
     id: number
 }
 
-export const NewComponent = (props:NewComponentType) => {
-    debugger
+export const NewComponent = (props: NewComponentType) => {
+
     return (
-        <div> New component </div>
+        <ul>
+            {props.students.map((objectFromStudentsArray, index) => {
+                return (
+                    <li key={objectFromStudentsArray.id}>
+                        <span>Name: {objectFromStudentsArray.name} </span>
+                        <span>Age: {objectFromStudentsArray.age}</span>
+                    </li>
+                )
+            })}
+        </ul>
     )
 }
